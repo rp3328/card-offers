@@ -1,0 +1,46 @@
+# Support And FAQ Draft
+
+## Support Contact Draft
+
+Use a real support email or support page before submission.
+
+Suggested support text:
+
+- Support: `support@your-domain.example`
+- Response scope: best-effort support for supported Amex, Chase, and Bank of America pages
+- Include when reporting an issue:
+  - bank name
+  - page URL pattern
+  - what action was run
+  - what the popup reported
+  - whether the user was logged in
+
+## FAQ Draft
+
+### What does Bank Offers do?
+
+Bank Offers helps inspect supported bank-offer pages and run user-triggered activation flows from the popup.
+
+### Does it work on every bank page?
+
+No. It is designed for supported Amex, Chase, and Bank of America offer surfaces only.
+
+### Does it send my browsing data anywhere?
+
+No. The current MVP does not send page data to remote servers. It uses local browser extension storage for popup and batch-run state.
+
+### Why does the extension sometimes say an offer is already active?
+
+Some bank list pages are not a perfect freshness source. The extension treats detail-page evidence as the source of truth when available.
+
+### Why did a run stop with session expired or logged out?
+
+That means the bank site likely lost the logged-in session during the run. Sign in again and retry.
+
+### Why does the extension ask for access to tabs and page content?
+
+It needs the active tab URL plus page DOM access to detect supported offer pages, collect visible candidates, and run activation flows on those supported pages.
+
+### Does Activate All click everything on the page?
+
+No. The current implementation uses bounded, conservative bank-specific rules and does not do infinite scrolling or full-site crawling.
