@@ -1,44 +1,185 @@
-# Support And FAQ 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Easy Card Offers Support and FAQ</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
 
-## Support Contact 
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f8;
+      color: #1f2328;
+    }
 
-Suggested support text:
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 32px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
 
-- Support: `rachmin19219917@gmail.com`
-- Response scope: best-effort support for supported Amex, Chase, and Bank of America pages
-- Include when reporting an issue:
-  - bank name
-  - page URL pattern
-  - what action was run
-  - what the popup reported
-  - whether the user was logged in
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin-top: 0;
+    }
 
-## FAQ 
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
 
-### What does Bank Offers do?
+    .intro {
+      color: #57606a;
+      margin-bottom: 24px;
+    }
 
-Bank Offers helps inspect supported bank-offer pages and run user-triggered activation flows from the popup.
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 6px;
+    }
 
-### Does it work on every bank page?
+    h3 {
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
 
-No. It is designed for supported Amex, Chase, and Bank of America offer surfaces only.
+    p {
+      margin: 12px 0;
+    }
 
-### Does it send my browsing data anywhere?
+    ul {
+      margin: 12px 0 12px 24px;
+      padding: 0;
+    }
 
-No. The current MVP does not send page data to remote servers. It uses local browser extension storage for popup and batch-run state.
+    li {
+      margin: 8px 0;
+    }
 
-### Why does the extension sometimes say an offer is already active?
+    code {
+      background: #f0f2f4;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
 
-Some bank list pages are not a perfect freshness source. The extension treats detail-page evidence as the source of truth when available.
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
 
-### Why did a run stop with session expired or logged out?
+    a:hover {
+      text-decoration: underline;
+    }
 
-That means the bank site likely lost the logged-in session during the run. Sign in again and retry.
+    .contact-box {
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 16px 0 24px;
+    }
 
-### Why does the extension ask for access to tabs and page content?
+    .footer {
+      margin-top: 36px;
+      font-size: 0.95rem;
+      color: #57606a;
+      border-top: 1px solid #d0d7de;
+      padding-top: 16px;
+    }
 
-It needs the active tab URL plus page DOM access to detect supported offer pages, collect visible candidates, and run activation flows on those supported pages.
+    @media (max-width: 700px) {
+      .container {
+        margin: 16px;
+        padding: 20px;
+      }
 
-### Does Activate All click everything on the page?
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Support and FAQ</h1>
+    <p class="intro">
+      Help for Easy Card Offers on supported Amex, Chase, and Bank of America pages.
+    </p>
 
-No. The current implementation uses bounded, conservative bank-specific rules and does not do infinite scrolling or full-site crawling.
+    <h2>Support Contact</h2>
+    <div class="contact-box">
+      <p><strong>Support:</strong> <a href="mailto:rachmin19219917@gmail.com">rachmin19219917@gmail.com</a></p>
+      <p><strong>Support scope:</strong> Best effort support for supported Amex, Chase, and Bank of America pages.</p>
+    </div>
+
+    <p>When reporting an issue, please include:</p>
+    <ul>
+      <li>bank name</li>
+      <li>page URL pattern</li>
+      <li>what action was run</li>
+      <li>what the popup reported</li>
+      <li>whether you were logged in</li>
+    </ul>
+
+    <h2>FAQ</h2>
+
+    <h3>What does Easy Card Offers do?</h3>
+    <p>
+      Easy Card Offers helps inspect supported bank offer pages and run user-triggered
+      activation flows from the popup.
+    </p>
+
+    <h3>Does it work on every bank page?</h3>
+    <p>
+      No. It is designed for supported Amex, Chase, and Bank of America offer surfaces only.
+    </p>
+
+    <h3>Does it send my browsing data anywhere?</h3>
+    <p>
+      No. The current MVP does not send page data to remote servers. It uses local browser
+      extension storage for popup and batch-run state.
+    </p>
+
+    <h3>Why does the extension sometimes say an offer is already active?</h3>
+    <p>
+      Some bank list pages are not a perfect freshness source. The extension treats
+      detail-page evidence as the source of truth when available.
+    </p>
+
+    <h3>Why did a run stop with session expired or logged out?</h3>
+    <p>
+      That means the bank site likely lost the logged-in session during the run.
+      Sign in again and retry.
+    </p>
+
+    <h3>Why does the extension ask for access to tabs and page content?</h3>
+    <p>
+      It needs the active tab URL plus page DOM access to detect supported offer pages,
+      collect visible candidates, and run activation flows on those supported pages.
+    </p>
+
+    <h3>Does Activate All click everything on the page?</h3>
+    <p>
+      No. The current implementation uses bounded, conservative bank-specific rules
+      and does not do infinite scrolling or full-site crawling.
+    </p>
+
+    <p class="footer">
+      Return to the <a href="./index.html">Easy Card Offers home page</a>.
+    </p>
+  </main>
+</body>
+</html>
