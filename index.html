@@ -3,15 +3,182 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bank Offers</title>
+  <title>Easy Card Offers</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f8;
+      color: #1f2328;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2 {
+      line-height: 1.25;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #57606a;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 6px;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul {
+      margin: 12px 0 12px 24px;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      padding: 18px;
+      background: #f6f8fa;
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0 0 12px 0;
+      color: #57606a;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #0969da;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      opacity: 0.92;
+    }
+
+    .note {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 10px;
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+    }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 0.95rem;
+      color: #57606a;
+      border-top: 1px solid #d0d7de;
+      padding-top: 16px;
+    }
+
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        margin: 16px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Bank Offers</h1>
-  <p>Browser extension for reviewing and activating eligible offers on supported Amex, Chase, and Bank of America pages.</p>
+  <main class="container">
+    <h1>Easy Card Offers</h1>
+    <p class="subtitle">
+      Browser extension for reviewing and activating eligible offers on supported Amex, Chase, and Bank of America pages.
+    </p>
 
-  <ul>
-    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-    <li><a href="./support.html">Support and FAQ</a></li>
-  </ul>
+    <h2>What it does</h2>
+    <p>
+      Easy Card Offers helps you inspect supported offer pages, collect visible offer candidates, and run user triggered activation flows from the popup.
+    </p>
+
+    <ul>
+      <li>supports Amex, Chase, and Bank of America offer surfaces</li>
+      <li>shows one click, small batch, and larger batch outcomes in the popup</li>
+      <li>keeps local run state in browser storage so summaries can be restored</li>
+      <li>uses bounded, bank specific rules instead of broad crawling behavior</li>
+    </ul>
+
+    <h2>Resources</h2>
+    <div class="grid">
+      <section class="card">
+        <h3>Privacy Policy</h3>
+        <p>Read how the extension accesses page data, what it stores locally, and what it does not collect or sell.</p>
+        <a class="button" href="./privacy-policy.html">Open Privacy Policy</a>
+      </section>
+
+      <section class="card">
+        <h3>Support and FAQ</h3>
+        <p>Find support contact details, troubleshooting notes, and answers to common questions.</p>
+        <a class="button" href="./support.html">Open Support Page</a>
+      </section>
+    </div>
+
+    <div class="note">
+      <strong>Current scope:</strong> Easy Card Offers is designed for supported bank offer pages only. It is not intended to run on arbitrary websites.
+    </div>
+
+    <p class="footer">
+      Easy Card Offers
+    </p>
+  </main>
 </body>
 </html>
