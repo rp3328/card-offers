@@ -1,62 +1,174 @@
-# Privacy Policy
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Easy Card Offers Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
 
-_Last updated: March 24, 2026_
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f8;
+      color: #1f2328;
+    }
 
-Bank Offers is a browser extension that helps users inspect and activate eligible bank offers on supported bank pages.
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 32px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
 
-## What The Extension Does
+    h1, h2 {
+      line-height: 1.25;
+      margin-top: 0;
+    }
 
-The extension:
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
 
-- checks the active page to see whether it matches supported offer surfaces
-- reads page title, URL, and local page DOM markers to detect supported bank offers
-- collects visible offer candidates from supported pages
-- runs user-triggered activation flows on supported pages
-- stores lightweight local state so popup results and batch runs can be restored
+    .updated {
+      color: #57606a;
+      margin-bottom: 24px;
+    }
 
-## Data We Access
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 6px;
+    }
 
-When you use the extension on supported pages, it may access:
+    p {
+      margin: 12px 0;
+    }
 
-- the current tab URL
-- the current page title
-- the page DOM needed to detect supported offers and activation state
-- local extension storage used for popup summaries and batch run state
+    ul {
+      margin: 12px 0 12px 24px;
+      padding: 0;
+    }
 
-## Data We Do Not Collect Or Sell
+    li {
+      margin: 8px 0;
+    }
 
-The extension does not:
+    code {
+      background: #f0f2f4;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
 
-- send browsing data to remote servers
-- use analytics or tracking pixels
-- sell personal information
-- share personal information with advertisers or data brokers
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
 
-## Local Storage Only
+    a:hover {
+      text-decoration: underline;
+    }
 
-Any stored state is kept locally in the browser's extension storage and is used only to:
+    .footer {
+      margin-top: 36px;
+      font-size: 0.95rem;
+      color: #57606a;
+      border-top: 1px solid #d0d7de;
+      padding-top: 16px;
+    }
 
-- restore popup results
-- restore Chase and Bank of America batch run summaries
-- keep batch state tied to the current page
+    @media (max-width: 700px) {
+      .container {
+        margin: 16px;
+        padding: 20px;
+      }
 
-## Permissions
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Privacy Policy</h1>
+    <p class="updated"><em>Last updated: March 24, 2026</em></p>
 
-The extension currently uses:
+    <p>
+      Easy Card Offers is a browser extension that helps users inspect and activate
+      eligible bank offers on supported bank pages.
+    </p>
 
-- `tabs`
-  - to inspect the active tab URL for page-aware popup and batch-state behavior
-- `storage`
-  - to save local popup and batch state
+    <h2>What the Extension Does</h2>
+    <p>The extension:</p>
+    <ul>
+      <li>checks the active page to see whether it matches supported offer surfaces</li>
+      <li>reads page title, URL, and local page DOM markers to detect supported bank offers</li>
+      <li>collects visible offer candidates from supported pages</li>
+      <li>runs user triggered activation flows on supported pages</li>
+      <li>stores lightweight local state so popup results and batch runs can be restored</li>
+    </ul>
 
-## Your Choices
+    <h2>Data We Access</h2>
+    <p>When you use the extension on supported pages, it may access:</p>
+    <ul>
+      <li>the current tab URL</li>
+      <li>the current page title</li>
+      <li>the page DOM needed to detect supported offers and activation state</li>
+      <li>local extension storage used for popup summaries and batch run state</li>
+    </ul>
 
-You can stop all extension activity at any time by:
+    <h2>Data We Do Not Collect or Sell</h2>
+    <p>The extension does not:</p>
+    <ul>
+      <li>send browsing data to remote servers</li>
+      <li>use analytics or tracking pixels</li>
+      <li>sell personal information</li>
+      <li>share personal information with advertisers or data brokers</li>
+    </ul>
 
-- closing the popup without starting a flow
-- uninstalling the extension
-- clearing browser extension storage
+    <h2>Local Storage Only</h2>
+    <p>
+      Any stored state is kept locally in the browser's extension storage and is used only to:
+    </p>
+    <ul>
+      <li>restore popup results</li>
+      <li>restore Chase and Bank of America batch run summaries</li>
+      <li>keep batch state tied to the current page</li>
+    </ul>
 
-## Contact
+    <h2>Permissions</h2>
+    <p>The extension currently uses:</p>
+    <ul>
+      <li><code>tabs</code> to inspect the active tab URL for page aware popup and batch state behavior</li>
+      <li><code>storage</code> to save local popup and batch state</li>
+    </ul>
 
-For support or privacy questions, use the support contact published with the extension listing.
+    <h2>Your Choices</h2>
+    <p>You can stop all extension activity at any time by:</p>
+    <ul>
+      <li>closing the popup without starting a flow</li>
+      <li>uninstalling the extension</li>
+      <li>clearing browser extension storage</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      For support or privacy questions, use the support contact published with the extension listing.
+    </p>
+
+    <p class="footer">
+      Return to the <a href="./index.html">Easy Card Offers home page</a>.
+    </p>
+  </main>
+</body>
+</html>
